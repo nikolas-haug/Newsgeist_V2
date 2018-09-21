@@ -13,7 +13,7 @@ class News extends Component {
             
             <div className="container">
                 <h1>News Page!</h1>
-                <Button color="danger">Danger button!</Button>
+                <Button color="success">Success!</Button>
             </div>
             
         )
