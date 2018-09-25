@@ -31,6 +31,9 @@ import {
       return (
         <div>
           <Navbar color="light" light expand="md">
+
+            <div className="container">
+
             <NavbarBrand href="/">reactstrap</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -60,6 +63,9 @@ import {
                 </UncontrolledDropdown>
               </Nav>
             </Collapse>
+
+            </div>
+
           </Navbar>
         </div>
       );
