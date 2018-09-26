@@ -14,6 +14,7 @@ class News extends Component {
             <div className="container">
                 <h1>News Page!</h1>
                 <Button color="success">Success!</Button>
+                <h3>You landed!</h3>
             </div>
             
         )

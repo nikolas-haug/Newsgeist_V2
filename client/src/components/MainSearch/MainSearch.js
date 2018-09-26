@@ -18,10 +18,23 @@ class MainSearch extends Component {
         console.log(newState);
     }
 
+
+    // ******** TEST WITH THE NEWS PAGE -- TO DO - add results page after api call *************
+
+    // pass the user input into the react router path after form submit
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+        this.setState({
+            searchTerm: ""
+        });
+        // let newSearchTerm = this.state.searchTerm;
+        this.props.history.push("/news");
+    }
+
     render() {
         return (
             <div>
-                <MainInput searchTerm={this.state.searchTerm} handleChange={this.handleInputChange}/>
+                <MainInput searchTerm={this.state.searchTerm} handleChange={this.handleInputChange} handleSubmit={this.handleFormSubmit} />
             </div>
             
         )

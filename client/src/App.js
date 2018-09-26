@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing';
 import News from './components/News/News';
 
-import MainSearch from './components/MainInput/MainSearch';
+import MainSearch from './components/MainSearch/MainSearch';
 
 const App = () => (
   <Router>
