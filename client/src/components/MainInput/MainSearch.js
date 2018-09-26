@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-class SearchResults extends Component {
+import MainInput from './MainInput';
+
+class MainSearch extends Component {
     constructor(props) {
         super(props);
-        this.setState = {
-            searchTerm = ""
+        this.state = {
+            searchTerm: ""
         }
     }
 
@@ -13,14 +15,17 @@ class SearchResults extends Component {
         let newState = {};
         newState[event.target.id] = event.target.value;
         this.setState(newState);
-        // console.log(newState);
+        console.log(newState);
     }
 
     render() {
         return (
-            <h1>Search Results</h1>
+            <div>
+                <MainInput searchTerm={this.state.searchTerm} handleChange={this.handleInputChange}/>
+            </div>
+            
         )
     }
 }
 
-export default SearchResults;
+export default MainSearch;

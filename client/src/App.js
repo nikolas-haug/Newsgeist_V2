@@ -5,13 +5,13 @@ import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing';
 import News from './components/News/News';
 
-import MainInput from './components/MainInput/MainInput';
+import MainSearch from './components/MainInput/MainSearch';
 
 const App = () => (
   <Router>
     <div>
       <Route path="/" component={Navbar} />
-      <Route path="/" component={MainInput} />
+      <Route path="/" component={MainSearch} />
       <Route exact path="/home" component={Landing} />
       <Route exact path="/news" component={News} />
     </div>
