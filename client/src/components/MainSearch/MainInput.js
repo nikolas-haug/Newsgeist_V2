@@ -6,7 +6,7 @@ const MainInput = (props) => {
         <div className="container">
             <Form onSubmit={props.handleSubmit}>
                 <InputGroup>
-                    <InputGroupAddon addonType="prepend"><Button>I'm a button</Button></InputGroupAddon>
+                    <InputGroupAddon addonType="prepend"><Button>submit</Button></InputGroupAddon>
                     <Input 
                         type="text"
                         placeholder="search term"

@@ -3,6 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+const api = require("./routes/api");
+
 const cors = require('cors');
 
 const PORT = process.env.PORT || 3001;
@@ -18,7 +20,8 @@ app.use(cors());
 // Serve files created by create-react-app.
 app.use(express.static("../client/build"));
 
-
+//Set up app to use routes
+app.use(api);
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database

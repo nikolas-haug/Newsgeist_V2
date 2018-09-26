@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
+import API from '../../API/control';
 
 class SearchResults extends Component {
     constructor(props) {
         super(props);
-        this.setState = {
-            searchTerm = ""
-        }
+        // this.setState = {
+        //     searchTerm: ""
+        // }
     }
 
-    handleInputChange = (event) => {
-        // Here we create syntax to capture any change in text to the query terms (pre-search).
-        let newState = {};
-        newState[event.target.id] = event.target.value;
-        this.setState(newState);
-        // console.log(newState);
+    componentDidMount() {
+        this.getNewsResults(this.props.match.params.term);
+    }
+
+    getNewsResults = (searchTerm) => {
+        API.getNews(searchTerm).then((res) => {
+            console.log(res);
+        }).catch((err) => { 
+            console.log(err);
+        });
     }
 
     render() {

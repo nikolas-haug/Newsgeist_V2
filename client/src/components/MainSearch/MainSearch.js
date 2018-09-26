@@ -27,8 +27,10 @@ class MainSearch extends Component {
         this.setState({
             searchTerm: ""
         });
-        // let newSearchTerm = this.state.searchTerm;
-        this.props.history.push("/news");
+        let newSearchTerm = this.state.searchTerm;
+        // this.props.history.push("/news");
+
+        this.props.history.push("/news_search/" + newSearchTerm);        
     }
 
     render() {
