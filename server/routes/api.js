@@ -9,7 +9,7 @@ router.get('/api/news/:search_term', function(req, res) {
     axios.get(`https://newsapi.org/v2/everything?q=${req.params.search_term}&pageSize=20&sources=al-jazeera-english,bbc-news,cnn,fortune,fox-news,msnbc,rt,the-economist,the-new-york-times,the-wall-street-journal,the-washington-post,vice-news,time,the-huffington-post,reuters,wired,the-american-conservative,the-hill,new-scientist,national-review&apiKey=${newsKEY}`)
         .then((response) => {
             res.json(response.data);
-            console.log(response.data);
+            // console.log(response.data);
         }).catch((err) => {
             console.log(err);
         });
