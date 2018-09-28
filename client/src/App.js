@@ -9,15 +9,26 @@ import Header from './components/Header/Header';
 import MainSearch from './components/MainSearch/MainSearch';
 import SearchResults from './components/MainSearch/SearchResults';
 
+// TEST ARCHIVE PAGE WITH AUTH
+import AuthInput from './components/Navbar/AuthInput';
+import Archive from './components/Archive/Archive';
+
 const App = () => (
   <Router>
     <div>
       <Route path="/" component={Navbar} />
       <Route path="/" component={Header} />
+
+      {/* TEST FOR AUTH INPUT FIELDS */}
+      <Route path="/" component={AuthInput} />
+
       <Route path="/" component={MainSearch} />
       <Route exact path="/home" component={Landing} />
-      <Route exact path="/news" component={News} />
       <Route exact path="/news_search/:term" component={SearchResults} />
+      {/* TEST BELOW HERE */}
+      <Route exact path="/archive" component={Archive} />
+      <Route exact path="/news" component={News} />
+      
     </div>
   </Router>
 )
